@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis de Cores Temáticas */
+:root {
+    --color-primary: #E53935; /* Vermelho Demon Slayer */
+    --color-secondary: #2C3E50; /* Azul escuro/Preto */
+    --color-text-light: #f4f4f4;
+    --color-text-dark: #333;
+    --color-background-dark: rgba(13, 13, 13, 0.9);
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    /* Fundo de imagem mais sutil ou uma textura */
+    background: var(--color-background-dark); 
+    color: var(--color-text-light);
+    min-height: 100vh;
+}
+
+/* Header fixo e estiloso */
+.main-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--color-background-dark);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.logo img {
+    width: 100px;
+    transition: transform 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.main-nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 18px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+.main-nav a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+section {
+    padding: 100px 50px;
+}
+
+/* Seção de Introdução (Hero) */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./imgs/download (5).jfif') no-repeat center center/cover;
+    border-bottom: 5px solid var(--color-primary);
+}
+
+.hero-section .main-title img {
+    max-width: 900px; 
+    width: 90%;
+    margin-bottom: 30px; 
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--color-text-light);
+    text-shadow: 1px 1px 6px #000;
+    letter-spacing: 2px;
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.section-title {
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 12px 60px;
+    border-radius: 5px;
+    font-size: 2.2rem;
+    font-family: var(--font-title);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Componentes de Busca */
+.search-group input {
+    padding: 12px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #2c3e50;
+    color: var(--color-text-light);
+    outline: none;
+}
+
+.search-group .search-btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.search-group .search-btn:hover {
+    background-color: #A32825; /* Vermelho mais escuro */
+}
+
+/* Estrutura de Exibição */
+.content-display {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.info-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 240, 240, 0.95) 100%);
+    border: 3px solid var(--color-primary);
+    border-radius: 15px;
+    padding: 30px;
+    flex-basis: 65%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    color: var(--color-text-dark);
+}
+
+.card-header {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+.item-name {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-family: var(--font-title);
+    color: #000;
+    text-shadow: 1px 1px 0 #ccc;
+}
+
+/* Estilo para a lista de detalhes gerada pelo JS */
+.item-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.item-details li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.item-details li:last-child {
+    border-bottom: none;
+}
+
+.item-details strong {
+    color: var(--color-primary);
+}
+
+.image-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 5px solid var(--color-secondary);
+    border-radius: 15px;
+    padding: 15px;
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#personagem-image, #oni-image, #respiracao-image {
+    width: 100%;
+    max-height: 450px; /* Limite a altura da imagem para consistência */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--color-primary);
+}
+
+/* Seção Sobre */
+.about-section {
+    padding: 80px 50px;
+}
+
+.about-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-card {
+    flex-basis: calc(33.333% - 20px);
+    min-width: 300px;
+    text-align: center;
+}
+.about-card p {
+    color: var(--color-text-dark);
+}
+
+
+/* Responsividade Básica */
+@media (max-width: 1200px) {
+    .content-display {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-card, .image-card {
+        flex-basis: 80%;
+        max-width: 700px;
+    }
+    .image-card {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .main-nav {
+        margin-top: 10px;
+    }
+    .main-nav a {
+        margin: 0 8px;
+        font-size: 1rem;
+    }
+    section {
+        padding: 60px 20px;
+    }
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .search-group {
+        width: 100%;
+        display: flex;
+    }
+    .search-group input {
+        flex-grow: 1;
+    }
+    .section-title {
+        font-size: 1.8rem;
+        padding: 10px 30px;
+    }
+    .about-card {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section .main-title img {
+        width: 100%;
+    }
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .item-name {
+        font-size: 2rem;
+    }
+}

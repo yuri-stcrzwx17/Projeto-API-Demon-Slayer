@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Demon Slayer - Kimetsu no Yaiba</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <a href="#home" class="logo">
+            <img src="./imgs/logo-demon-Slayer.png" alt="Logo Demon Slayer">
+        </a>
+        <nav class="main-nav">
+            <a href="#personagens">Personagens</a>
+            <a href="#respiracoes">Respirações</a>
+            <a href="#onis">Onis</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <a href="#home" class="main-title">
+            <img src="./imgs/titulo.png" alt="Título Demon Slayer">
+        </a>
+        <p class="hero-subtitle">Explore o universo dos caçadores e demônios</p>
+    </section>
+
+    <section id="personagens" class="content-section">
+        <div class="section-header">
+            <h1 class="section-title">PERSONAGENS</h1>
+            <div class="search-group">
+                <input type="text" id="personagem-search-input" placeholder="Nome do personagem...">
+                <button id="personagem-search-button" class="search-btn">BUSCAR</button>
+            </div>
+        </div>
+        <div class="content-display">
+            <div class="info-card">
+                <h2 class="card-header">INFORMAÇÕES:</h2>
+                <h3 id="personagem-name" class="item-name">Carregando...</h3>
+                <div id="personagem-details" class="item-details"></div>
+            </div>
+            <aside class="image-card">
+                <img id="personagem-image" src="./imgs/placeholder.jpg" alt="Imagem do Personagem">
+            </aside>
+        </div>
+    </section>
+
+    <section id="respiracoes" class="content-section">
+        <div class="section-header">
+            <h1 class="section-title">RESPIRAÇÕES</h1>
+            <div class="search-group">
+                <input type="text" id="respiracao-search-input" placeholder="Nome da respiração...">
+                <button id="respiracao-search-button" class="search-btn">BUSCAR</button>
+            </div>
+        </div>
+        <div class="content-display">
+            <div class="info-card">
+                <h2 class="card-header">INFORMAÇÕES:</h2>
+                <h3 id="respiracao-name" class="item-name">Carregando...</h3>
+                <div id="respiracao-details" class="item-details"></div>
+            </div>
+            <aside class="image-card">
+                <img id="respiracao-image" src="./imgs/placeholder.jpg" alt="Imagem da Respiração">
+            </aside>
+        </div>
+    </section>
+
+    <section id="onis" class="content-section">
+        <div class="section-header">
+            <h1 class="section-title">ONIS</h1>
+            <div class="search-group">
+                <input type="text" id="oni-search-input" placeholder="Nome do oni...">
+                <button id="oni-search-button" class="search-btn">BUSCAR</button>
+            </div>
+        </div>
+        <div class="content-display">
+            <div class="info-card">
+                <h2 class="card-header">INFORMAÇÕES:</h2>
+                <h3 id="oni-name" class="item-name">Carregando...</h3>
+                <div id="oni-details" class="item-details"></div>
+            </div>
+            <aside class="image-card">
+                <img id="oni-image" src="./imgs/placeholder.jpg" alt="Imagem do Oni">
+            </aside>
+        </div>
+    </section>
+
+    <section id="sobre" class="content-section about-section">
+        <div class="section-header">
+            <h1 class="section-title">SOBRE O PROJETO</h1>
+        </div>
+        <div class="about-grid">
+            <div class="info-card about-card">
+                <h2 class="card-header">SOBRE O SITE</h2>
+                <p>Este site é um projeto de estudo que consome a Demon Slayer API para exibir informações sobre personagens, onis e estilos de respiração do universo de Kimetsu no Yaiba.</p>
+            </div>
+            <div class="info-card about-card">
+                <h2 class="card-header">CRIADOR</h2>
+                <p>Projeto desenvolvido por Yuri Silva como parte da matéria de Front-End do Senai.</p>
+            </div>
+            <div class="info-card about-card">
+                <h2 class="card-header">TECNOLOGIAS</h2>
+                <p>Utiliza HTML5, CSS3 e JavaScript puro para realizar as requisições (Fetch API) e manipular o DOM dinamicamente.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
