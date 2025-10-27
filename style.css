@@ -23,7 +23,6 @@ html {
 
 body {
     font-family: var(--font-body);
-    /* Fundo de imagem mais sutil ou uma textura */
     background: var(--color-background-dark); 
     color: var(--color-text-light);
     min-height: 100vh;
@@ -74,17 +73,21 @@ section {
 
 /* Seção de Introdução (Hero) */
 .hero-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./imgs/download (5).jfif') no-repeat center center/cover;
-    border-bottom: 5px solid var(--color-primary);
-}
+    
 
-.hero-section .main-title img {
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./imgs/img_fundo.jpg') no-repeat center center/cover;
+       
+    
+     border-bottom: 5px solid var(--color-primary);
+    }
+    
+    .hero-section .main-title img {
     max-width: 900px; 
     width: 90%;
     margin-bottom: 30px; 
