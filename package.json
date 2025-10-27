@@ -1,0 +1,16 @@
+{
+  "name": "projeto-api-demon-slayer",
+  "version": "1.0.0",
+  "description": "Projeto Demon Slayer API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuri-stcrzwx17/Projeto-API-Demon-Slayer.git"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
